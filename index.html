@@ -1417,7 +1417,7 @@ tr.ticket-has-reply{background:linear-gradient(90deg,rgba(251,191,36,.16),transp
               <div class="settings-panel">
                 <div class="settings-panel-title">Correos de avisos</div>
                 <p class="settings-panel-subtitle">El administrador recibe todos los tickets, excepto las categorías marcadas como No admin.</p>
-                <div class="form-group"><label>Administrador principal</label><input type="email" id="setNotifyAdminEmail" placeholder="conserjeria.wm815@gmail.com" readonly required></div>
+                <div class="form-group"><label>Administrador principal</label><input type="email" id="setNotifyAdminEmail" placeholder="admedificiolagloria30@gmail.com" readonly required></div>
                 <div class="form-group"><label>Correo en copia (opcional)</label><input type="email" id="setNotifyCcEmail" placeholder="opcional@entrecerros.cl"></div>
                 <div class="form-group"><label>Correo Mayordomo</label><input type="email" id="setMayordomoEmail" placeholder="angelfrias1993@gmail.com"></div>
                 <p class="admin-simple-note">El segundo trigger usa la colección <code>Mayordomo</code>. No necesitas configurar reglas manuales.</p>
@@ -1425,8 +1425,8 @@ tr.ticket-has-reply{background:linear-gradient(90deg,rgba(251,191,36,.16),transp
             </div>
             <div class="form-group full"><label>URL app residentes (consulta ticket · correos)</label><input type="url" id="setPublicAppUrl" readonly placeholder="https://contactosadm-svg.github.io/Chatbots-Entre-Cerros/"><p class="ticket-hint" style="margin:.35rem 0 0">Todos los botones de correo al residente apuntan a esta página del chat.</p></div>
             <div class="form-group full"><label>URL del panel admin</label><input type="url" id="setAdminPanelUrl" placeholder="https://contactosadm-svg.github.io/Chatbots-Entre-Cerros/"></div>
-            <div class="form-group"><label>Remitente FROM (SMTP)</label><input type="email" id="setSmtpGmail" placeholder="conserjeria.wm815@gmail.com" autocomplete="username" readonly title="Configurado en Firebase Trigger Email"></div>
-            <div class="form-group"><label>Responder a REPLY-TO</label><input type="email" id="setSmtpReplyTo" placeholder="conserjeria.wm815@gmail.com"></div>
+            <div class="form-group"><label>Remitente FROM (SMTP)</label><input type="email" id="setSmtpGmail" placeholder="admedificiolagloria30@gmail.com" autocomplete="username" readonly title="Configurado en Firebase Trigger Email"></div>
+            <div class="form-group"><label>Responder a REPLY-TO</label><input type="email" id="setSmtpReplyTo" placeholder="admedificiolagloria30@gmail.com"></div>
             <div class="form-group admin-technical"><label>Contraseña de aplicación Google</label><input type="password" id="setSmtpAppPassword" placeholder="Configurada en la extensión Trigger Email" autocomplete="new-password" readonly></div>
             <div class="form-group full admin-technical"><label>URI SMTP (extensión Firebase)</label><input type="text" id="setSmtpConnectionUri" readonly placeholder="smtps://usuario:***@smtp.gmail.com:465"></div>
             <div class="form-group admin-technical"><label>Colección de correo</label><input type="text" id="setMailCollection" value="mail" readonly></div>
@@ -1435,7 +1435,7 @@ tr.ticket-has-reply{background:linear-gradient(90deg,rgba(251,191,36,.16),transp
             <div class="form-group admin-technical"><label>TTL documentos mail</label><input type="text" id="setFirestoreTtl" value="Never" readonly></div>
             <input type="hidden" id="setTicketEmailMode" value="extension">
             <p id="smtpConfigStatus" class="ticket-hint admin-technical" style="margin:0 0 .5rem"></p>
-            <p class="ticket-hint admin-technical" style="margin:0 0 .75rem">Al crear ticket se escribe <code>mail/TK-…</code> en la base <strong>(default)</strong>. Trigger Email envía el aviso al administrador <strong>conserjeria.wm815@gmail.com</strong>.</p>
+            <p class="ticket-hint admin-technical" style="margin:0 0 .75rem">Al crear ticket se escribe <code>mail/TK-…</code> en la base <strong>(default)</strong>. Trigger Email envía el aviso al administrador <strong>admedificiolagloria30@gmail.com</strong>.</p>
             <div class="form-group full" style="display:flex;gap:.5rem;flex-wrap:wrap">
               <button type="button" class="btn btn-secondary btn-sm admin-technical" id="btnVerifyTicketEmail">Verificar correo</button>
               <button type="button" class="btn btn-secondary btn-sm admin-technical" id="btnDiagnoseTriggerEmail">Diagnóstico Trigger Email</button>
@@ -1762,11 +1762,11 @@ const ARTURITO_GADGET_CATEGORIES = {
     smtpAuthType: 'UsernamePassword',
     smtpAuthTypeLabel: 'Username & Password',
     smtpConnectionUri: '',
-    smtpMaskedUri: 'smtps://conserjeria.wm815@gmail.com:***@smtp.gmail.com:465',
+    smtpMaskedUri: 'smtps://admedificiolagloria30@gmail.com:***@smtp.gmail.com:465',
     smtpConfiguredInExtension: true,
-    smtpFromEmail: 'conserjeria.wm815@gmail.com',
-    smtpReplyTo: 'conserjeria.wm815@gmail.com',
-    notifyAdminEmail: 'conserjeria.wm815@gmail.com',
+    smtpFromEmail: 'admedificiolagloria30@gmail.com',
+    smtpReplyTo: 'admedificiolagloria30@gmail.com',
+    notifyAdminEmail: 'admedificiolagloria30@gmail.com',
     notifyCcEmail: '',
     publicAppUrl: 'https://contactosadm-svg.github.io/Chatbots-Entre-Cerros/',
     smtpPort: 465,
@@ -3024,7 +3024,7 @@ const ARTURITO_GADGET_CATEGORIES = {
       if (!String(merged.notifyAdminEmail || '').trim() && local?.notifyAdminEmail) {
         merged.notifyAdminEmail = local.notifyAdminEmail;
       }
-      merged.notifyAdminEmail = (globalThis.ARTURITO_FIREBASE_EMAIL_DEFAULTS || {}).notifyAdminEmail || 'conserjeria.wm815@gmail.com';
+      merged.notifyAdminEmail = (globalThis.ARTURITO_FIREBASE_EMAIL_DEFAULTS || {}).notifyAdminEmail || 'admedificiolagloria30@gmail.com';
       if (!String(merged.adminPanelUrl || '').trim() && local?.adminPanelUrl) {
         merged.adminPanelUrl = local.adminPanelUrl;
       }
@@ -3320,7 +3320,7 @@ const ARTURITO_GADGET_CATEGORIES = {
         chatMessages: s.chatMessages ? { ...s.chatMessages } : {},
         gadgetCategories: s.gadgetCategories ? JSON.parse(JSON.stringify(s.gadgetCategories)) : {},
         gadgetCategoryOrder: Array.isArray(s.gadgetCategoryOrder) ? s.gadgetCategoryOrder.slice() : [],
-        notifyAdminEmail: defs.notifyAdminEmail || 'conserjeria.wm815@gmail.com',
+        notifyAdminEmail: defs.notifyAdminEmail || 'admedificiolagloria30@gmail.com',
         notifyCcEmail: s.notifyCcEmail || '',
         ticketCategories: Array.isArray(s.ticketCategories) && s.ticketCategories.length
           ? s.ticketCategories.map((c) => String(c || '').trim()).filter(Boolean)
@@ -6239,7 +6239,7 @@ const SettingsModule = {
     set('setSecondaryColor', s.secondaryColor, 'value');
     set('setWelcomeMsg', s.welcomeMessage, 'value');
     const defs = window.ARTURITO_FIREBASE_EMAIL_DEFAULTS || {};
-    set('setNotifyAdminEmail', defs.notifyAdminEmail || 'conserjeria.wm815@gmail.com', 'value');
+    set('setNotifyAdminEmail', defs.notifyAdminEmail || 'admedificiolagloria30@gmail.com', 'value');
     set('setNotifyCcEmail', s.notifyCcEmail || '', 'value');
     set('setTicketCategories', getTicketCategories().join('\n'), 'value');
     const mayordomoRoute = getMayordomoRoute(s);
@@ -6256,7 +6256,7 @@ const SettingsModule = {
     const gmailEl = document.getElementById('setSmtpGmail');
     if (gmailEl) gmailEl.value = s.smtpFromEmail || defs.smtpFromEmail || '';
     const uriEl = document.getElementById('setSmtpConnectionUri');
-    if (uriEl) uriEl.value = defs.smtpMaskedUri || 'smtps://conserjeria.wm815@gmail.com:***@smtp.gmail.com:465';
+    if (uriEl) uriEl.value = defs.smtpMaskedUri || 'smtps://admedificiolagloria30@gmail.com:***@smtp.gmail.com:465';
     const modeEl = document.getElementById('setTicketEmailMode');
     if (modeEl) modeEl.value = 'extension';
     TicketEmailDebug.updateSmtpStatusIndicator();
@@ -6407,7 +6407,7 @@ const SettingsModule = {
     database.settings.welcomeMessage = document.getElementById('setWelcomeMsg').value.trim();
     database.settings.portalTagline = document.getElementById('setPortalTagline').value.trim();
     database.settings.portalHint = document.getElementById('setPortalHint').value.trim();
-    database.settings.notifyAdminEmail = window.ARTURITO_FIREBASE_EMAIL_DEFAULTS?.notifyAdminEmail || 'conserjeria.wm815@gmail.com';
+    database.settings.notifyAdminEmail = window.ARTURITO_FIREBASE_EMAIL_DEFAULTS?.notifyAdminEmail || 'admedificiolagloria30@gmail.com';
     const notifyCcEmail = document.getElementById('setNotifyCcEmail')?.value.trim() || '';
     if (notifyCcEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(notifyCcEmail)) {
       toast('Ingresa un correo válido en copia (CC)', 'warning');
@@ -6461,7 +6461,7 @@ const SettingsModule = {
       toast('Ingresa un correo válido en REPLY-TO', 'warning');
       return;
     }
-    database.settings.smtpReplyTo = replyTo || (window.ARTURITO_FIREBASE_EMAIL_DEFAULTS?.smtpReplyTo || 'conserjeria.wm815@gmail.com');
+    database.settings.smtpReplyTo = replyTo || (window.ARTURITO_FIREBASE_EMAIL_DEFAULTS?.smtpReplyTo || 'admedificiolagloria30@gmail.com');
     database.settings.mailCollection = document.getElementById('setMailCollection')?.value.trim() || 'mail';
     database.settings.firestoreLocation = database.settings.firestoreLocation || 'southamerica-west1';
     database.settings.smtpAuthType = database.settings.smtpAuthType || 'UsernamePassword';
@@ -9132,7 +9132,7 @@ const TicketEmailDebug = {
       return queued;
     }
 
-    const to = this._parseEmails(settings?.notifyAdminEmail || defaults.notifyAdminEmail || 'conserjeria.wm815@gmail.com');
+    const to = this._parseEmails(settings?.notifyAdminEmail || defaults.notifyAdminEmail || 'admedificiolagloria30@gmail.com');
     const cc = this._parseEmails(settings?.notifyCcEmail);
     if (!to.length) return null;
     const mailId = `${ticketId}-resident-${Date.now()}`;
@@ -9268,7 +9268,7 @@ const TicketEmailDebug = {
       ? { ...defaults, ...database.settings, ...(settingsSnap.data || {}) }
       : { ...defaults, ...(database.settings || {}) };
     ensureTicketEmailRoutingDefaults(settings);
-    const requiredAdmin = this._parseEmails(defaults.notifyAdminEmail || 'conserjeria.wm815@gmail.com')[0];
+    const requiredAdmin = this._parseEmails(defaults.notifyAdminEmail || 'admedificiolagloria30@gmail.com')[0];
     const adminEmail = requiredAdmin;
     const to = adminEmail ? [adminEmail] : [];
     const cc = this._parseEmails(settings?.notifyCcEmail)
